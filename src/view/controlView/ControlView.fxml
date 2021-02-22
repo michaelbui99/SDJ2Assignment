@@ -44,12 +44,12 @@
                         <Insets left="50.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField promptText="Type max:" GridPane.columnIndex="1">
+                  <TextField fx:id="max" promptText="Type max:" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="50.0" right="200.0" />
                      </GridPane.margin>
                   </TextField>
-                  <TextField layoutX="209.0" layoutY="56.0" promptText="Type min:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <TextField fx:id="min" layoutX="209.0" layoutY="56.0" promptText="Type min:" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="50.0" right="200.0" />
                      </GridPane.margin>
@@ -69,12 +69,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" text="Button">
+                  <Button mnemonicParsing="false" onAction="#onButtonBack" text="Back">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button layoutX="10.0" layoutY="45.0" mnemonicParsing="false" text="Button" GridPane.columnIndex="1">
+                  <Button layoutX="10.0" layoutY="45.0" mnemonicParsing="false" onAction="#onButtonUpdate" text="Update" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="240.0" />
                      </GridPane.margin>
