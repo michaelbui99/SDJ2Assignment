@@ -3,7 +3,7 @@ package core;
 import view.mainView.MainViewController;
 import view.controlView.ControlViewController;
 
-public class ViewHandler {
+public class ViwHandler {
 
 	private ViewModelFactory viewModelFactory;
 
