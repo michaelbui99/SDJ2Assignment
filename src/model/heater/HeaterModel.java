@@ -9,5 +9,6 @@ public interface HeaterModel {
 	public int getPower();
 	public void setState(HeaterState heater);
 
+	 HeaterState heaterState = null;
 
 }
