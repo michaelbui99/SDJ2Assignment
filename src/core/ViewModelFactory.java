@@ -1,7 +1,13 @@
 package core;
 
+import view.controlView.ControlViewVM;
+import view.mainView.MainViewVM;
+
 public class ViewModelFactory {
 
-	private ModelFactory modelFactory;
+	private ControlViewVM controlViewVM;
+	private MainViewVM mainViewVM;
+
+
 
 }
