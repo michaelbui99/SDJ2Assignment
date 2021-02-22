@@ -12,12 +12,12 @@ public class HeaterModelManager implements HeaterModel {
 
   @Override public void turnUp(HeaterState heater) throws InterruptedException
   {
-
+    currentState.turnUp(this);
   }
 
   @Override public void turnDown(HeaterState heater)
   {
-
+    currentState.turnDown(this);
   }
 
   @Override public int getPower()
