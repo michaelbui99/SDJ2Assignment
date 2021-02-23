@@ -30,21 +30,28 @@
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Inside teperature:">
+                  <Label text="Inside teperature 2:">
                      <GridPane.margin>
                         <Insets left="40.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label layoutX="10.0" layoutY="58.0" text="Outside temperature:" GridPane.rowIndex="1">
+                  <Label layoutX="10.0" layoutY="58.0" text="Outside temperature:" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="40.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label fx:id="insideTemperature" text="Info" GridPane.columnIndex="1" />
-                  <Label fx:id="outsideTemperature" layoutX="311.0" layoutY="40.0" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="insideTemperature1" text="Info" GridPane.columnIndex="1" />
+                  <Label fx:id="outsideTemperature" layoutX="311.0" layoutY="40.0" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Inside teperature 2:" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="40.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="insideTemperature2" layoutX="451.0" layoutY="27.0" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </children>

@@ -11,13 +11,11 @@ import java.io.IOException;
 
 public class MainViewController implements ViewController {
 
-	@FXML public Label insideTemperature;
 	@FXML public Label heaterStage;
 	@FXML public Label warning;
 	@FXML public Label outsideTemperature;
-  @FXML public Label insideTemperatureOne;
-	@FXML public Label outsideTemperatureThree;
-	@FXML public Label insideTemperatureTwo;
+  @FXML public Label insideTemperature2;
+	@FXML public Label insideTemperature1;
 
 	private MainViewVM mainViewVM;
 	private ViewHandler viewHandler;

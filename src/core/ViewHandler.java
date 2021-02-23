@@ -26,16 +26,15 @@ public class ViewHandler
 //  private ControlViewController controlViewController;
 
 
-  public ViewHandler(ViewModelFactory vmf)
+  public ViewHandler(Stage stage, ViewModelFactory vmf)
   {
     this.vmf = vmf;
-    stage = new Stage();
+    this.stage = stage;
   }
 
 
-  public void start(Stage stage) throws IOException
+  public void start() throws IOException
   {
-    this.stage = stage;
     openView("Main");
   }
 
