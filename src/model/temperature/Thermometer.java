@@ -12,7 +12,7 @@ public class Thermometer implements Runnable
 
   public Thermometer(String id, double t, int d, TemperatureModel temperatureModel, HeaterModel heaterModel)
   {
-    this.temperatureModel = temperatureModelmodel;
+    this.temperatureModel = temperatureModel;
     this.heaterModel = heaterModel;
     this.id = id;
     this.t = t;
