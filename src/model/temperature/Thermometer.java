@@ -1,14 +1,19 @@
 package model.temperature;
 
+import model.heater.HeaterModel;
+
 public class Thermometer implements Runnable
 {
   private String id;
   private double t;
   private int d;
-  private TemperatureModel model;
-  public Thermometer(String id, double t, int d, TemperatureModel model)
+  private TemperatureModel temperatureModel;
+  private HeaterModel heaterModel;
+
+  public Thermometer(String id, double t, int d, TemperatureModel temperatureModel, HeaterModel heaterModel)
   {
-    this.model = model;
+    this.temperatureModel = temperatureModelmodel;
+    this.heaterModel = heaterModel;
     this.id = id;
     this.t = t;
     this.d = d;
@@ -50,8 +55,8 @@ public class Thermometer implements Runnable
   {
     while(true)
     {
-      t = temperature(this.t, 2, this.d, 0, 6 );
-      model.addTemperature(this.id, t);
+      t = temperature(this.t, heaterModel.getPower(), this.d, 0, 6 );
+      temperatureModel.addTemperature(this.id, t);
       System.out.printf("Temp: %s ID: %s %n", t, id);
       try
       {
