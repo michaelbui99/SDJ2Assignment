@@ -37,6 +37,6 @@ public class ControlViewController implements ViewController {
 
 	public void onButtonUpdate(ActionEvent actionEvent)
 	{
-
+		controlViewVM.updateMaxAndMin();
 	}
 }
