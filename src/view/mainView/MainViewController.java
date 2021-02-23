@@ -7,7 +7,7 @@ import core.ViewModelFactory;
 public class MainViewController implements ViewController {
 
 	private MainViewVM mainViewVM;
-
+	
 
 	/**
 	 * @see view.ViewController#init(core.ViewHandler, core.ViewModelFactory)
