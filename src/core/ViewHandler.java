@@ -43,7 +43,7 @@ public class ViewHandler
     Scene scene = null;
     FXMLLoader loader = new FXMLLoader();
     Parent root= null;
-    loader.setLocation(getClass().getResource(id+"View.fxml"));
+    loader.setLocation(getClass().getResource("../view/mainView/" + id+"View.fxml"));
     root = loader.load();
     if (id.equals("Main"))
     {
