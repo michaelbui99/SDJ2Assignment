@@ -55,7 +55,7 @@ public class Thermometer implements Runnable
   {
     while(true)
     {
-      t = temperature(this.t, heaterModel.getPower(), this.d, 0, 6 );
+      t = temperature(this.t,heaterModel.getPower(), this.d, 0, 6 );
       temperatureModel.addTemperature(this.id, t);
       System.out.printf("Temp: %s ID: %s %n", t, id);
       try

@@ -1,9 +1,7 @@
 package view.mainView;
 
 import javafx.application.Platform;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 import model.heater.HeaterModel;
 import model.temperature.Temperature;
 import model.temperature.TemperatureModel;
@@ -16,24 +14,40 @@ public class MainViewVM {
   private HeaterModel heaterModel;
   private StringProperty indoorTemp1;
   private StringProperty indoorTemp2;
+  private StringProperty heaterPower;
 
   public MainViewVM(TemperatureModel temperatureModel, HeaterModel heaterModel)
   {
     this.temperatureModel = temperatureModel;
     this.heaterModel = heaterModel;
     temperatureModel.addPropertyChangeListener("TemperatureChange", this::updateThermometer);
+    temperatureModel.addPropertyChangeListener("TemperatureChange", this::updateHeater);
+
     indoorTemp1 = new SimpleStringProperty("Hello there");
     indoorTemp2 = new SimpleStringProperty("Hello there");
+    heaterPower = new SimpleStringProperty("");
   }
 
   public void turnUpHeater() throws InterruptedException
   {
     heaterModel.turnUp();
+    heaterPower.setValue(String.valueOf(heaterModel.getPower()));
   }
 
+
+  public StringProperty heaterPowerProperty()
+  {
+    return heaterPower;
+  }
+
+  public int getHeaterPower()
+  {
+    return heaterModel.getPower();
+  }
   public void turnDownHeater()
   {
     heaterModel.turnDown();
+    heaterPower.setValue(String.valueOf(heaterModel.getPower()));
   }
 
 
@@ -47,6 +61,13 @@ public class MainViewVM {
     return indoorTemp2;
   }
 
+
+  public void updateHeater(PropertyChangeEvent evt)
+  {
+    Platform.runLater(()->{
+      heaterPower.setValue(String.valueOf(heaterModel.getPower()));
+    });
+  }
 
 
   public void updateThermometer(PropertyChangeEvent evt)

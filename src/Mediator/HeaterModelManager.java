@@ -22,7 +22,7 @@ public class HeaterModelManager implements HeaterModel {
 
   @Override public int getPower()
   {
-    return 0;
+    return currentState.getPower();
   }
 
   @Override public void setState(HeaterState heater)
