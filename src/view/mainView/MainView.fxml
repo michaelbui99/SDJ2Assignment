@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.mainView.MainViewController">
    <children>
       <HBox alignment="CENTER" prefHeight="89.0" prefWidth="600.0">
          <children>
@@ -44,7 +44,7 @@
                      </GridPane.margin>
                   </Label>
                   <Label fx:id="insideTemperature" text="Info" GridPane.columnIndex="1" />
-                  <Label fx:id="outsideTemerature" layoutX="311.0" layoutY="40.0" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="outsideTemperature" layoutX="311.0" layoutY="40.0" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </children>

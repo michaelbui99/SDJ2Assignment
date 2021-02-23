@@ -39,7 +39,7 @@ public class ViewHandler
     openView("Main");
   }
 
-  private void openView(String id)
+  private void openView(String id) throws IOException
   {
     Scene scene = null;
     FXMLLoader loader = new FXMLLoader();
