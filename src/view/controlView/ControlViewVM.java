@@ -5,8 +5,6 @@ import javafx.beans.property.StringProperty;
 import model.heater.HeaterModel;
 import model.temperature.TemperatureModel;
 
-import java.beans.PropertyChangeEvent;
-
 public class ControlViewVM {
 
   private TemperatureModel temperatureModel;
