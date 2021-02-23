@@ -1,5 +1,7 @@
 package core;
 
+import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +16,7 @@ import view.mainView.MainViewController;
 import javax.naming.ldap.Control;
 import java.io.IOException;
 
-public class ViewHandler
+public class ViewHandler extends javafx.application.Application
 {
 
   private Stage stage;
@@ -30,12 +32,6 @@ public class ViewHandler
   {
     this.vmf = vmf;
     this.stage = stage;
-  }
-
-
-  public void start() throws IOException
-  {
-    openView("Main");
   }
 
   public void openView(String id) throws IOException
@@ -64,4 +60,14 @@ public class ViewHandler
     stage.show();
   }
 
+  @FXML
+  public void closeView() throws IOException
+  {
+    Platform.exit();
+  }
+
+  @Override public void start(Stage stage) throws Exception
+  {
+    openView("Main");
+  }
 }

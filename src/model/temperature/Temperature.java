@@ -22,6 +22,7 @@ public class Temperature
     return time;
   }
   public String toString()
+
   {
     return String.format("%s: %.1f (%s)", id, value, time.getTimestamp());
   }

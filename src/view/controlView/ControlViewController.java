@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import model.temperature.Temperature;
 import view.ViewController;
 import core.ViewHandler;
 import core.ViewModelFactory;
@@ -37,6 +38,6 @@ public class ControlViewController implements ViewController {
 
 	public void onButtonUpdate(ActionEvent actionEvent)
 	{
-		controlViewVM.updateMaxAndMin();
+		controlViewVM.updateMaxAndMin(min.getText(), max.getText());
 	}
 }
