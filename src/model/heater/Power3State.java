@@ -42,6 +42,6 @@ public class Power3State implements HeaterState {
 
   @Override public int getPower()
   {
-    return 0;
+    return POWER;
   }
 }

@@ -28,15 +28,18 @@ public class MainViewController implements ViewController {
 		this.viewHandler = viewHandler;
 		insideTemperature1.textProperty().bind(mainViewVM.indoorTemp1Property());
 		insideTemperature2.textProperty().bind(mainViewVM.indoorTemp2Property());
+		heaterStage.textProperty().bind(mainViewVM.heaterPowerProperty());
 	}
 
 	public void onButtonUp(ActionEvent actionEvent) throws InterruptedException
 	{
+//		heaterStage.setText("Stage is: " + mainViewVM.getHeaterPower());
 		mainViewVM.turnUpHeater();
 	}
 
 	public void onButtonDown(ActionEvent actionEvent)
 	{
+//		heaterStage.setText("Stage is: " + mainViewVM.getHeaterPower());
 		mainViewVM.turnDownHeater();
 	}
 

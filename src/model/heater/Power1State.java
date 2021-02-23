@@ -3,7 +3,7 @@ package model.heater;
 import Mediator.HeaterModelManager;
 
 public class Power1State implements HeaterState {
-  private static int POWER =1;
+  private final static int POWER =1;
 
   public Power1State()
   {
