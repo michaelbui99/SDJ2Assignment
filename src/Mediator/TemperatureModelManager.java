@@ -29,6 +29,8 @@ public class TemperatureModelManager implements TemperatureModel {
     {
       System.out.println("-->" + temperature + " (from: " + old + ")");
     }
+    support.firePropertyChange("TemperatureChange", old, temperature);
+    System.out.println("Temperature Change alert");
   }
 
   @Override public Temperature getLastInsertedTemperature()
