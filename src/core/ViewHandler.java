@@ -43,16 +43,18 @@ public class ViewHandler
     Scene scene = null;
     FXMLLoader loader = new FXMLLoader();
     Parent root= null;
-    loader.setLocation(getClass().getResource("../view/mainView/" + id+"View.fxml"));
-    root = loader.load();
     if (id.equals("Main"))
     {
+    loader.setLocation(getClass().getResource("../view/mainView/" + id+"View.fxml"));
+    root = loader.load();
       MainViewController viewController = loader.getController();
       viewController.init(this, vmf);
       stage.setTitle("Main View");
     }
     else if (id.equals("Control"))
     {
+      loader.setLocation(getClass().getResource("../view/controlView/" + id+"View.fxml"));
+      root = loader.load();
       ControlViewController viewController = loader.getController();
       viewController.init(this, vmf);
       stage.setTitle("Control View");
