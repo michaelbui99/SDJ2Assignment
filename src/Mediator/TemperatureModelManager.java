@@ -1,5 +1,7 @@
 package Mediator;
 
+import model.temperature.Temperature;
+import model.temperature.TemperatureList;
 import model.temperature.TemperatureModel;
 
 import java.beans.PropertyChangeListener;
@@ -8,13 +10,14 @@ import java.beans.PropertyChangeSupport;
 public class TemperatureModelManager implements TemperatureModel {
 
   private TemperatureList temperatureList;
-  private PropertyChangeSupport property;
+  private PropertyChangeSupport support;
+
 
   public TemperatureModelManager()
   {
 
     temperatureList = new TemperatureList();
-    property = new PropertyChangeSupport(this);
+    support = new PropertyChangeSupport(this);
   }
 
   @Override public void addTemperature(String id, double value)
@@ -41,24 +44,24 @@ public class TemperatureModelManager implements TemperatureModel {
   @Override public void addPropertyChangeListener(String name,
       PropertyChangeListener listener)
   {
-
+    support.addPropertyChangeListener(name, listener);
   }
 
   @Override public void addPropertyChangeListener(
       PropertyChangeListener listener)
   {
-
+    support.addPropertyChangeListener(listener);
   }
 
   @Override public void removePropertyChangeListener(String name,
       PropertyChangeListener listener)
   {
-
+    support.removePropertyChangeListener(name, listener);
   }
 
   @Override public void removePropertyChangeListener(
       PropertyChangeListener listener)
   {
-
+    support.removePropertyChangeListener(listener);
   }
 }
