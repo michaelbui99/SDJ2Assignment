@@ -28,13 +28,14 @@ public class MainViewController implements ViewController {
 		this.viewHandler = viewHandler;
 	}
 
-	public void onButtonUp(ActionEvent actionEvent)
+	public void onButtonUp(ActionEvent actionEvent) throws InterruptedException
 	{
-
+		mainViewVM.turnUpHeater();
 	}
 
 	public void onButtonDown(ActionEvent actionEvent)
 	{
+		mainViewVM.turnDownHeater();
 	}
 
 	public void onButtonClose(ActionEvent actionEvent)

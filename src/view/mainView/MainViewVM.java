@@ -52,11 +52,11 @@ public class MainViewVM {
   public void updateThermometer(PropertyChangeEvent evt)
   {
     Platform.runLater(() -> {
-      if(((Temperature) evt.getNewValue()).getId().equals("thermometer1"))
+      if(((Temperature) evt.getNewValue()).getId().equals("t1"))
       {
       indoorTemp1Property().setValue(evt.getNewValue().toString());
       }
-      else if ((((Temperature) evt.getNewValue()).getId()).equals("thermometer2"))
+      else if ((((Temperature) evt.getNewValue()).getId()).equals("t2"))
       indoorTemp2Property().setValue(evt.getNewValue().toString());
     });
   }
