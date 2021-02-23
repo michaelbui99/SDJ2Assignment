@@ -31,6 +31,7 @@ public class MainViewController implements ViewController {
 		insideTemperature1.textProperty().bind(mainViewVM.indoorTemp1Property());
 		insideTemperature2.textProperty().bind(mainViewVM.indoorTemp2Property());
 		heaterStage.textProperty().bind(mainViewVM.heaterPowerProperty());
+		warning.textProperty().bind(mainViewVM.warningProperty());
 	}
 
 	public void onButtonUp(ActionEvent actionEvent) throws InterruptedException
@@ -54,4 +55,6 @@ public class MainViewController implements ViewController {
 	{
 		viewHandler.openView("Control");
 	}
+
+
 }

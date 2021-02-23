@@ -21,14 +21,17 @@ public class App extends javafx.application.Application {
 	{
 		Thermometer thermometer1 = new Thermometer("t1", 15, 1, temperatureModel, heaterModel);
 		Thermometer thermometer2 = new Thermometer("t2", 10, 7, temperatureModel, heaterModel);
+		Thermometer thermometer3 = new Thermometer("t0", 15, 4, temperatureModel, heaterModel);
 
 
 		Thread thread1 = new Thread(thermometer1);
 		Thread thread2 = new Thread(thermometer2);
+		Thread thread3 = new Thread(thermometer3);
 
 
 		thread1.start();
 		thread2.start();
+		thread3.start();
 
 	}
 }

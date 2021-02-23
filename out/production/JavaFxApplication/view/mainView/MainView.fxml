@@ -75,7 +75,7 @@
                      </GridPane.margin>
                   </Label>
                   <Label fx:id="heaterStage" GridPane.columnIndex="1" />
-                  <Label fx:id="warning" layoutX="446.0" layoutY="34.0" text="warning" textFill="RED" GridPane.rowIndex="2">
+                  <Label fx:id="warning"  layoutX="446.0" layoutY="34.0"  textFill="RED" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="40.0" />
                      </GridPane.margin>
@@ -101,7 +101,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#onButtonClose" text="Close" />
+                  <Button mnemonicParsing="false" onAction="#onButtonClose" text="Close" />
                   <Button layoutX="10.0" layoutY="52.0" mnemonicParsing="false" onAction="#onButtonSettings" text="Settings" GridPane.columnIndex="1" />
                </children>
             </GridPane>
