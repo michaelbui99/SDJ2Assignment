@@ -10,15 +10,12 @@ import java.beans.PropertyChangeEvent;
 public class ControlViewVM {
 
   private TemperatureModel temperatureModel;
-  private HeaterModel heaterModel;
-
   private StringProperty max;
   private StringProperty min;
 
   public ControlViewVM(TemperatureModel temperatureModel, HeaterModel heaterModel)
   {
     this.temperatureModel = temperatureModel;
-    this.heaterModel = heaterModel;
     max = new SimpleStringProperty();
     min = new SimpleStringProperty();
   }
