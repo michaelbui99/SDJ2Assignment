@@ -5,10 +5,10 @@ import Mediator.HeaterModelManager;
 public class Power3State implements HeaterState {
 
   private static int POWER =3;
-  private HeaterModelManager heater;
+  private HeaterModel heater;
   private Thread t1;
 
-  public Power3State(final HeaterModelManager heater) throws InterruptedException
+  public Power3State(final HeaterModel heater) throws InterruptedException
   {
     System.out.println("Now on PowerState 3");
     Runnable runnable = ()->{
@@ -30,12 +30,12 @@ public class Power3State implements HeaterState {
 
   }
 
-  @Override public void turnUp(HeaterModelManager heater)
+  @Override public void turnUp(HeaterModel heater)
   {
     //Do nothing
   }
 
-  @Override public void turnDown(HeaterModelManager heater)
+  @Override public void turnDown(HeaterModel heater)
   {
     t1.interrupt();
   }

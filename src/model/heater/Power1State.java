@@ -10,12 +10,12 @@ public class Power1State implements HeaterState {
     System.out.println("now on PowerState 1");
   }
 
-  @Override public void turnUp(HeaterModelManager heater)
+  @Override public void turnUp(HeaterModel heater)
   {
     heater.setState(new Power2State());
   }
 
-  @Override public void turnDown(HeaterModelManager heater)
+  @Override public void turnDown(HeaterModel heater)
   {
     heater.setState(new PowerOffState());
   }

@@ -7,12 +7,12 @@ public class PowerOffState implements HeaterState {
 
   private static int POWER =0;
 
-  @Override public void turnUp(HeaterModelManager heater)
+  @Override public void turnUp(HeaterModel heater)
   {
     heater.setState(new Power1State());
   }
 
-  @Override public void turnDown(HeaterModelManager heater)
+  @Override public void turnDown(HeaterModel heater)
   {
     //Do nothing
   }

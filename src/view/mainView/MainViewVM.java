@@ -26,6 +26,16 @@ public class MainViewVM {
     indoorTemp2 = new SimpleStringProperty("Hello there");
   }
 
+  public void turnUpHeater() throws InterruptedException
+  {
+    heaterModel.turnUp();
+  }
+
+  public void turnDownHeater()
+  {
+    heaterModel.turnDown();
+  }
+
 
   public StringProperty indoorTemp1Property()
   {
