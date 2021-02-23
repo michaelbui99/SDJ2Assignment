@@ -26,6 +26,8 @@ public class MainViewController implements ViewController {
 	{
 		mainViewVM = vmf.getMainViewVM();
 		this.viewHandler = viewHandler;
+		insideTemperature1.textProperty().bind(mainViewVM.indoorTemp1Property());
+		insideTemperature2.textProperty().bind(mainViewVM.indoorTemp2Property());
 	}
 
 	public void onButtonUp(ActionEvent actionEvent) throws InterruptedException
