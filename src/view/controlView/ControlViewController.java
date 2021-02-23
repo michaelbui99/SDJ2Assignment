@@ -1,11 +1,15 @@
 package view.controlView;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TextField;
 import view.ViewController;
 import core.ViewHandler;
 import core.ViewModelFactory;
 
 public class ControlViewController implements ViewController {
 
+	public TextField max;
+	public TextField min;
 	private ControlViewVM controlViewVM;
 
 
@@ -16,4 +20,11 @@ public class ControlViewController implements ViewController {
 
 	}
 
+	public void onButtonBack(ActionEvent actionEvent)
+	{
+	}
+
+	public void onButtonUpdate(ActionEvent actionEvent)
+	{
+	}
 }
