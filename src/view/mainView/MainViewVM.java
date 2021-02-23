@@ -2,6 +2,7 @@ package view.mainView;
 
 import javafx.application.Platform;
 import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import model.heater.HeaterModel;
 import model.temperature.Temperature;
@@ -21,6 +22,8 @@ public class MainViewVM {
     this.temperatureModel = temperatureModel;
     this.heaterModel = heaterModel;
     temperatureModel.addPropertyChangeListener("TemperatureChange", this::updateThermometer);
+    indoorTemp1 = new SimpleStringProperty("Hello there");
+    indoorTemp2 = new SimpleStringProperty("Hello there");
   }
 
 
