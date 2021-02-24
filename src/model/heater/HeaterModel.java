@@ -1,8 +1,10 @@
 package model.heater;
 
 import Mediator.HeaterModelManager;
+import model.PropertyChangeSubject;
 
-public interface HeaterModel {
+public interface HeaterModel extends PropertyChangeSubject
+{
 
 	public void turnUp() throws InterruptedException;
 	public void turnDown();

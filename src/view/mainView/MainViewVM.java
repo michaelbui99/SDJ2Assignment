@@ -26,8 +26,9 @@ public class MainViewVM
     this.heaterModel = heaterModel;
     temperatureModel.addPropertyChangeListener("TemperatureChange",
         this::updateThermometer);
-    temperatureModel
-        .addPropertyChangeListener("TemperatureChange", this::updateHeater);
+//    temperatureModel
+//        .addPropertyChangeListener("TemperatureChange", this::updateHeater);
+    heaterModel.addPropertyChangeListener("StateChange", this::updateHeater);
 
     indoorTemp1 = new SimpleStringProperty("");
     indoorTemp2 = new SimpleStringProperty("");
