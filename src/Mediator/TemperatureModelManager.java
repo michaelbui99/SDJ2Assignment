@@ -13,6 +13,7 @@ public class TemperatureModelManager implements TemperatureModel {
   private PropertyChangeSupport support;
 
 
+
   public TemperatureModelManager()
   {
 
@@ -22,6 +23,7 @@ public class TemperatureModelManager implements TemperatureModel {
 
   @Override public void addTemperature(String id, double value)
   {
+
     Temperature temperature = new Temperature(id, value);
     Temperature old = getLastInsertedTemperature();
     this.temperatureList.addTemperature(temperature);

@@ -1,9 +1,13 @@
 package view.controlView;
 
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.event.ActionEvent;
 import model.heater.HeaterModel;
 import model.temperature.TemperatureModel;
+
 
 public class ControlViewVM {
 
@@ -18,20 +22,12 @@ public class ControlViewVM {
     min = new SimpleStringProperty();
   }
 
-  public StringProperty maxProperty()
-  {
-    return max;
-  }
 
-  public StringProperty minProperty()
-  {
-    return min;
-  }
 
-  public void updateMaxAndMin()
+  public void updateMaxAndMin(String min, String max)
   {
-    temperatureModel.addTemperature("max", Double.parseDouble(max.getValue()));
-    temperatureModel.addTemperature("min", Double.parseDouble(min.getValue()));
+    temperatureModel.addTemperature("max", Double.parseDouble(max));
+    temperatureModel.addTemperature("min", Double.parseDouble(min));
   }
 
 
