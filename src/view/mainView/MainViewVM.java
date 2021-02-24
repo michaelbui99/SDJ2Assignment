@@ -30,9 +30,9 @@ public class MainViewVM
 //        .addPropertyChangeListener("TemperatureChange", this::updateHeater);
     heaterModel.addPropertyChangeListener("StateChange", this::updateHeater);
 
-    indoorTemp1 = new SimpleStringProperty("");
-    indoorTemp2 = new SimpleStringProperty("");
-    heaterPower = new SimpleStringProperty("");
+    indoorTemp1 = new SimpleStringProperty("No updates yet");
+    indoorTemp2 = new SimpleStringProperty("No updates yet");
+    heaterPower = new SimpleStringProperty(String.valueOf(heaterModel.getPower()));
     min = 0;
     max = 0;
     warning = new SimpleStringProperty("");
