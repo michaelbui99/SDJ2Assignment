@@ -48,7 +48,7 @@ public class MainViewController implements ViewController {
 
 	public void onButtonClose(ActionEvent actionEvent) throws IOException
 	{
-		viewHandler.closeView();
+		System.exit(0);
 	}
 
 	public void onButtonSettings(ActionEvent actionEvent) throws IOException
@@ -56,5 +56,8 @@ public class MainViewController implements ViewController {
 		viewHandler.openView("Control");
 	}
 
-
+  public void onButtonOpenChart(ActionEvent actionEvent) throws IOException
+	{
+  	viewHandler.openView("Linechart");
+  }
 }

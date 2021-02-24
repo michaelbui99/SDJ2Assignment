@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.mainView.MainViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.mainView.MainViewController">
    <children>
       <HBox alignment="CENTER" prefHeight="89.0" prefWidth="600.0">
          <children>
@@ -75,7 +75,7 @@
                      </GridPane.margin>
                   </Label>
                   <Label fx:id="heaterStage" GridPane.columnIndex="1" />
-                  <Label fx:id="warning"  layoutX="446.0" layoutY="34.0"  textFill="RED" GridPane.rowIndex="2">
+                  <Label fx:id="warning" layoutX="446.0" layoutY="34.0" textFill="RED" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="40.0" />
                      </GridPane.margin>
@@ -86,6 +86,7 @@
                      </GridPane.margin>
                   </Button>
                   <Button layoutX="10.0" layoutY="93.0" mnemonicParsing="false" onAction="#onButtonDown" text="Down" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#onButtonOpenChart" text="Open chart" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </children>

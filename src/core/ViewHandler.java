@@ -11,6 +11,7 @@ import model.heater.HeaterModel;
 import model.temperature.TemperatureModel;
 import view.ViewController;
 import view.controlView.ControlViewController;
+import view.linechart.LineChartController;
 import view.mainView.MainViewController;
 
 import javax.naming.ldap.Control;
@@ -41,7 +42,7 @@ public class ViewHandler extends javafx.application.Application
     Parent root= null;
     if (id.equals("Main"))
     {
-    loader.setLocation(getClass().getResource("../view/mainView/" + id+"View.fxml"));
+    loader.setLocation(getClass().getResource("../view/mainView/" + id +"View.fxml"));
     root = loader.load();
       MainViewController viewController = loader.getController();
       viewController.init(this, vmf);
@@ -49,11 +50,19 @@ public class ViewHandler extends javafx.application.Application
     }
     else if (id.equals("Control"))
     {
-      loader.setLocation(getClass().getResource("../view/controlView/" + id+"View.fxml"));
+      loader.setLocation(getClass().getResource("../view/controlView/" + id +"View.fxml"));
       root = loader.load();
       ControlViewController viewController = loader.getController();
       viewController.init(this, vmf);
       stage.setTitle("Control View");
+    }
+    else if (id.equals("Linechart"))
+    {
+      loader.setLocation(getClass().getResource("../view/linechart/" + id + "View.fxml"));
+      root = loader.load();
+      LineChartController lineChartController = loader.getController();
+      lineChartController.init(this, vmf);
+      stage.setTitle("Line chart");
     }
     scene = new Scene(root);
     stage.setScene(scene);
