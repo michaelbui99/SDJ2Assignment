@@ -30,6 +30,7 @@ public class MainViewController implements ViewController {
 		this.viewHandler = viewHandler;
 		insideTemperature1.textProperty().bind(mainViewVM.indoorTemp1Property());
 		insideTemperature2.textProperty().bind(mainViewVM.indoorTemp2Property());
+		outsideTemperature.textProperty().bind(mainViewVM.externalTempProperty());
 		heaterStage.textProperty().bind(mainViewVM.heaterPowerProperty());
 		warning.textProperty().bind(mainViewVM.warningProperty());
 	}

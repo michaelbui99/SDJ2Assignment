@@ -29,29 +29,35 @@
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Inside Temperature 1">
+                  <Label text="Inside Temperature 1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="40.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label layoutX="10.0" layoutY="58.0" text="Outside temperature:" GridPane.rowIndex="2">
+                  <Label layoutX="10.0" layoutY="58.0" text="Outside temperature:" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="40.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label fx:id="insideTemperature1" text="Info" GridPane.columnIndex="1" />
-                  <Label fx:id="outsideTemperature" layoutX="311.0" layoutY="40.0" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label text="Inside temperature 2" GridPane.rowIndex="1">
+                  <Label fx:id="insideTemperature1" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="outsideTemperature" layoutX="311.0" layoutY="40.0" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Inside temperature 2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="40.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label fx:id="insideTemperature2" layoutX="451.0" layoutY="27.0" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="insideTemperature2" layoutX="451.0" layoutY="27.0" text="Info" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Thermometers" textFill="#1e0eed">
+                     <GridPane.margin>
+                        <Insets left="40.0" />
+                     </GridPane.margin>
+                  </Label>
                </children>
             </GridPane>
          </children>
@@ -64,29 +70,35 @@
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Courent heater stage:">
+                  <Label text="Courent heater stage:" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="-108.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label fx:id="heaterStage" GridPane.columnIndex="1" />
-                  <Label fx:id="warning" layoutX="446.0" layoutY="34.0" textFill="RED" GridPane.rowIndex="2">
+                  <Label fx:id="heaterStage" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="warning" layoutX="446.0" layoutY="34.0" textFill="RED" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="40.0" />
                      </GridPane.margin>
                   </Label>
-                  <Button layoutX="10.0" layoutY="93.0" mnemonicParsing="false" onAction="#onButtonUp" text="Up" GridPane.rowIndex="1">
+                  <Button layoutX="10.0" layoutY="93.0" mnemonicParsing="false" onAction="#onButtonUp" text="Up" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
                   </Button>
-                  <Button layoutX="10.0" layoutY="93.0" mnemonicParsing="false" onAction="#onButtonDown" text="Down" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" onAction="#onButtonOpenChart" text="Open chart" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button layoutX="10.0" layoutY="93.0" mnemonicParsing="false" onAction="#onButtonDown" text="Down" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#onButtonOpenChart" text="Open chart" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Radiator" textFill="#1d0eee">
+                     <GridPane.margin>
+                        <Insets left="-166.0" />
+                     </GridPane.margin>
+                  </Label>
                </children>
             </GridPane>
          </children>

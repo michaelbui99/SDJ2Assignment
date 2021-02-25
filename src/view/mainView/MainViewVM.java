@@ -16,6 +16,7 @@ public class MainViewVM
   private StringProperty indoorTemp1;
   private StringProperty indoorTemp2;
   private StringProperty heaterPower;
+  private StringProperty externalTemp;
   private double min;
   private double max;
   private StringProperty warning;
@@ -32,6 +33,7 @@ public class MainViewVM
 
     indoorTemp1 = new SimpleStringProperty("No updates yet");
     indoorTemp2 = new SimpleStringProperty("No updates yet");
+    externalTemp = new SimpleStringProperty("No Updates yet");
     heaterPower = new SimpleStringProperty(String.valueOf(heaterModel.getPower()));
     min = 0;
     max = 0;
@@ -60,6 +62,10 @@ public class MainViewVM
     heaterPower.setValue(String.valueOf(heaterModel.getPower()));
   }
 
+  public StringProperty externalTempProperty()
+  {
+    return externalTemp;
+  }
   public StringProperty indoorTemp1Property()
   {
     return indoorTemp1;
@@ -111,6 +117,10 @@ public class MainViewVM
           warningProperty().setValue("Warning!! temp 2 is out of bounds");
         }
         indoorTemp2Property().setValue(evt.getNewValue().toString());
+      }
+      else if ((((Temperature) evt.getNewValue()).getId().equals("t0")))
+      {
+        externalTemp.setValue(evt.getNewValue().toString());
       }
     });
   }

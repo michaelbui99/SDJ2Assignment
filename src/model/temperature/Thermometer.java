@@ -6,6 +6,7 @@ public class Thermometer implements Runnable
 {
   private String id;
   private double t;
+  private double t0;
   private int d;
   private TemperatureModel temperatureModel;
   private HeaterModel heaterModel;
@@ -17,6 +18,7 @@ public class Thermometer implements Runnable
     this.id = id;
     this.t = t;
     this.d = d;
+    t0 = 0;
   }
 
   /**
@@ -51,12 +53,35 @@ public class Thermometer implements Runnable
     return t;
   }
 
+  /**
+   * Calculating the external temperature.
+   * Values are only valid if the temperature is being measured
+   * approximately every 10th second.
+   *
+   * @param t0  the last measured external temperature
+   * @param min a lower limit (may temporally be deceeded)
+   * @param max an upper limit (may temporally be exceeded)
+   * @return an updated external temperature
+   */
+  public double externalTemperature(double t0, double min, double max)
+  {
+    double left = t0 - min;
+    double right = max - t0;
+    int sign = Math.random() * (left + right) > left ? 1 : -1;
+    t0 += sign * Math.random();
+    return t0;
+  }
+
+
   @Override public void run()
   {
     while(true)
     {
-      t = temperature(this.t,heaterModel.getPower(), this.d, 0, 6 );
+      double lastExternal = t0;
+      t0 = externalTemperature(lastExternal, -20,20);
+      t = temperature(this.t,heaterModel.getPower(), this.d, t0, 6 );
       temperatureModel.addTemperature(this.id, t);
+      temperatureModel.addTemperature("t0", t0);
       System.out.printf("Temp: %s ID: %s %n", t, id);
       try
       {
