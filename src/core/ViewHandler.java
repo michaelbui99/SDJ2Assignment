@@ -17,7 +17,6 @@ public class ViewHandler extends javafx.application.Application
 {
 
   private Stage stage;
-  private Scene currentScene;
   private ViewModelFactory vmf;
 
 
