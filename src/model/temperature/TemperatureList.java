@@ -17,15 +17,6 @@ public class TemperatureList
     list.add(temperature);
   }
 
-  public Temperature getTemperature(int index)
-  {
-    if (index >= 0 && index < list.size())
-    {
-      return list.get(index);
-    }
-    return null;
-  }
-
   public Temperature getLastTemperature(String id)
   {
     if (list.size() < 1)
@@ -44,11 +35,6 @@ public class TemperatureList
       }
     }
     return null;
-  }
-
-  public int getSize()
-  {
-    return list.size();
   }
 
   public String toString()
