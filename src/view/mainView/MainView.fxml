@@ -73,6 +73,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label text="Courent heater stage:" GridPane.rowIndex="1">
@@ -92,6 +93,7 @@
                         <Insets left="-166.0" />
                      </GridPane.margin>
                   </Label>
+                  <Label fx:id="warning" textFill="#e80606" GridPane.rowIndex="3" />
                </children>
             </GridPane>
          </children>
