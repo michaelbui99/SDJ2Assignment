@@ -17,10 +17,6 @@ public class Temperature
     return value;
   }
   public String getId() { return id;}
-  public DateTime getTime()
-  {
-    return time;
-  }
   public String toString()
 
   {

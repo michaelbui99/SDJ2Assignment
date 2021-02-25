@@ -11,6 +11,5 @@ public interface HeaterModel extends PropertyChangeSubject
 	public int getPower();
 	public void setState(HeaterState heater);
 
-	 HeaterState heaterState = null;
 
 }

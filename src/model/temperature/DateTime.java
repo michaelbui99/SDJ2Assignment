@@ -18,15 +18,5 @@ public class DateTime
         "dd/MM/yyyy HH:mm:ss");
     return sdf.format(date);
   }
-  public String getSortableTime()
-  {
-    SimpleDateFormat sdf = new SimpleDateFormat(
-        "yyyy-MM-dd-HH-mm-ss");
-    return sdf.format(date);
-  }
-  public String getSortableDate()
-  {
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-    return sdf.format(date);
-  }
+
 }

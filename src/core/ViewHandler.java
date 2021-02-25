@@ -19,10 +19,8 @@ public class ViewHandler extends javafx.application.Application
   private Stage stage;
   private Scene currentScene;
   private ViewModelFactory vmf;
-  private TemperatureModel temperatureModel;
-  private HeaterModel heaterModel;
-//  private MainViewController mainViewController;
-//  private ControlViewController controlViewController;
+
+
 
 
   public ViewHandler(Stage stage, ViewModelFactory vmf)

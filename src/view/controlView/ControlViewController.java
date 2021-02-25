@@ -15,8 +15,6 @@ public class ControlViewController implements ViewController {
 
 	@FXML private TextField max;
 	@FXML private TextField min;
-	@FXML private Button update;
-	@FXML private Button back;
 	private ControlViewVM controlViewVM;
 	private ViewHandler viewHandler;
 

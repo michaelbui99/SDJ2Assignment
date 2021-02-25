@@ -17,7 +17,7 @@ public class MainViewController implements ViewController {
 	@FXML public Label outsideTemperature;
   @FXML public Label insideTemperature2;
 	@FXML public Label insideTemperature1;
-	public Button closeButton;
+
 
 	private MainViewVM mainViewVM;
 	private ViewHandler viewHandler;
@@ -37,13 +37,13 @@ public class MainViewController implements ViewController {
 
 	public void onButtonUp(ActionEvent actionEvent) throws InterruptedException
 	{
-//		heaterStage.setText("Stage is: " + mainViewVM.getHeaterPower());
+
 		mainViewVM.turnUpHeater();
 	}
 
 	public void onButtonDown(ActionEvent actionEvent)
 	{
-//		heaterStage.setText("Stage is: " + mainViewVM.getHeaterPower());
+
 		mainViewVM.turnDownHeater();
 	}
 
@@ -57,8 +57,4 @@ public class MainViewController implements ViewController {
 		viewHandler.openView("Control");
 	}
 
-  public void onButtonOpenChart(ActionEvent actionEvent) throws IOException
-	{
-  	viewHandler.openView("Linechart");
-  }
 }

@@ -27,8 +27,6 @@ public class MainViewVM
     this.heaterModel = heaterModel;
     temperatureModel.addPropertyChangeListener("TemperatureChange",
         this::updateThermometer);
-//    temperatureModel
-//        .addPropertyChangeListener("TemperatureChange", this::updateHeater);
     heaterModel.addPropertyChangeListener("StateChange", this::updateHeater);
 
     indoorTemp1 = new SimpleStringProperty("No updates yet");
@@ -51,10 +49,6 @@ public class MainViewVM
     return heaterPower;
   }
 
-  public int getHeaterPower()
-  {
-    return heaterModel.getPower();
-  }
 
   public void turnDownHeater()
   {
