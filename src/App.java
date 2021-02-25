@@ -1,10 +1,16 @@
 import core.ModelFactory;
 import core.ViewModelFactory;
 import core.ViewHandler;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 import model.heater.HeaterModel;
+import model.temperature.DateTime;
 import model.temperature.TemperatureModel;
 import model.temperature.Thermometer;
+import view.linechart.LineChartController;
+import view.linechart.LineChartVM;
 
 public class App extends javafx.application.Application {
 
@@ -23,11 +29,9 @@ public class App extends javafx.application.Application {
 		Thermometer thermometer2 = new Thermometer("t2", 10, 7, temperatureModel, heaterModel);
 		Thermometer thermometer3 = new Thermometer("t0", 15, 4, temperatureModel, heaterModel);
 
-
 		Thread thread1 = new Thread(thermometer1);
 		Thread thread2 = new Thread(thermometer2);
 		Thread thread3 = new Thread(thermometer3);
-
 
 		thread1.start();
 		thread2.start();
