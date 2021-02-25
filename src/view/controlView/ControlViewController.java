@@ -28,7 +28,8 @@ public class ControlViewController implements ViewController {
 	{
 		controlViewVM = vmf.getControlViewVM();
 		this.viewHandler = viewHandler;
-
+		max.textProperty().bindBidirectional(controlViewVM.maxProperty());
+		min.textProperty().bindBidirectional(controlViewVM.minProperty());
 	}
 
 	public void onButtonBack(ActionEvent actionEvent) throws IOException

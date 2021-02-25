@@ -35,8 +35,8 @@ public class MainViewVM
     indoorTemp2 = new SimpleStringProperty("No updates yet");
     externalTemp = new SimpleStringProperty("No Updates yet");
     heaterPower = new SimpleStringProperty(String.valueOf(heaterModel.getPower()));
-    min = 0;
-    max = 0;
+    min = 18;
+    max = 25;
     warning = new SimpleStringProperty("");
   }
 
@@ -95,16 +95,22 @@ public class MainViewVM
       {
         min = ((Temperature) evt.getNewValue()).getValue();
       }
+
       if (((Temperature) evt.getNewValue()).getId().equals("max"))
       {
         max = ((Temperature) evt.getNewValue()).getValue();
       }
+
       if (((Temperature) evt.getNewValue()).getId().equals("t1"))
       {
         if ((((Temperature) evt.getNewValue()).getValue() < min
-            || ((Temperature) evt.getNewValue()).getValue() > max) && max > 0 && min > 0)
+            || ((Temperature) evt.getNewValue()).getValue() > max))
         {
           warningProperty().setValue("Warning!! temp 1 is out of bounds");
+        }
+        else if (((Temperature) evt.getNewValue()).getValue() > min && ((Temperature) evt.getNewValue()).getValue()< max)
+        {
+          warningProperty().setValue("");
         }
 
         indoorTemp1Property().setValue(evt.getNewValue().toString());
@@ -112,9 +118,13 @@ public class MainViewVM
       else if ((((Temperature) evt.getNewValue()).getId()).equals("t2"))
       {
         if ((((Temperature) evt.getNewValue()).getValue() < min
-            || ((Temperature) evt.getNewValue()).getValue() > max) && max > 0 && min > 0)
+            || ((Temperature) evt.getNewValue()).getValue() > max) )
         {
           warningProperty().setValue("Warning!! temp 2 is out of bounds");
+        }
+        else if (((Temperature) evt.getNewValue()).getValue() > min && ((Temperature) evt.getNewValue()).getValue()< max)
+        {
+          warningProperty().setValue("");
         }
         indoorTemp2Property().setValue(evt.getNewValue().toString());
       }
