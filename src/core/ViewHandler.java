@@ -1,6 +1,5 @@
 package core;
 
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,12 +8,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.heater.HeaterModel;
 import model.temperature.TemperatureModel;
-import view.ViewController;
 import view.controlView.ControlViewController;
-import view.linechart.LineChartController;
 import view.mainView.MainViewController;
 
-import javax.naming.ldap.Control;
 import java.io.IOException;
 
 public class ViewHandler extends javafx.application.Application
@@ -55,14 +51,6 @@ public class ViewHandler extends javafx.application.Application
       ControlViewController viewController = loader.getController();
       viewController.init(this, vmf);
       stage.setTitle("Control View");
-    }
-    else if (id.equals("Linechart"))
-    {
-      loader.setLocation(getClass().getResource("../view/linechart/" + id + "View.fxml"));
-      root = loader.load();
-      LineChartController lineChartController = loader.getController();
-      lineChartController.init(this, vmf);
-      stage.setTitle("Line chart");
     }
     scene = new Scene(root);
     stage.setScene(scene);

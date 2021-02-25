@@ -1,16 +1,10 @@
 import core.ModelFactory;
 import core.ViewModelFactory;
 import core.ViewHandler;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 import model.heater.HeaterModel;
-import model.temperature.DateTime;
 import model.temperature.TemperatureModel;
 import model.temperature.Thermometer;
-import view.linechart.LineChartController;
-import view.linechart.LineChartVM;
 
 public class App extends javafx.application.Application {
 
