@@ -1,4 +1,6 @@
-package server;
+package server.network;
+
+import shared.Request;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -24,7 +26,15 @@ public class ServerSocketHandler implements Runnable
 
     while (true)
     {
-      //Listen for requests...
+      //Listen for requests
+      try
+      {
+        Request requestFromClient = (Request) in.readObject();
+      }
+      catch (IOException | ClassNotFoundException e)
+      {
+        e.printStackTrace();
+      }
     }
   }
 }
