@@ -1,10 +1,10 @@
-import core.ModelFactory;
-import core.ViewModelFactory;
-import core.ViewHandler;
+import client.core.ModelFactory;
+import client.core.ViewModelFactory;
+import client.core.ViewHandler;
 import javafx.stage.Stage;
-import model.heater.HeaterModel;
-import model.temperature.TemperatureModel;
-import model.temperature.Thermometer;
+import client.model.heater.HeaterModel;
+import client.model.temperature.TemperatureModel;
+import client.model.temperature.Thermometer;
 
 public class App extends javafx.application.Application {
 
